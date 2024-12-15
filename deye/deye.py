@@ -140,6 +140,10 @@ if __name__ == '__main__':
     f = open(path + "/deyekey.py", "r")
     accessToken = f.read()
     print(accessToken) 
+    f.close()
+
+  accessToken = accessToken.strip()
+  
   url = 'https://eu1-developer.deyecloud.com/v1.0/station/listWithDevice'
   headers = {
         'Authorization': 'bearer ' + str(accessToken),
